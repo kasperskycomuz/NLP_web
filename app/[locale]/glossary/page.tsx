@@ -1,16 +1,15 @@
 import { PageHeader } from '@/components/page-header';
 import { glossary } from '@/content/glossary';
 import { Locale } from '@/i18n';
+import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 
 export default function GlossaryPage({ params }: { params: { locale: Locale } }) {
+  const t = useTranslations('pages.glossary');
   setRequestLocale(params.locale);
   return (
     <div className="space-y-6">
-      <PageHeader
-        title="📚 Глоссарий"
-        subtitle="Двуязычный словарь терминов с примерами"
-      />
+      <PageHeader title={t('title')} subtitle={t('subtitle')} />
       <div className="grid gap-4 md:grid-cols-2">
         {glossary.map((item) => (
           <div key={item.term} className="glass card-hover rounded-2xl p-5">

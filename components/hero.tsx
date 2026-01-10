@@ -3,6 +3,7 @@ import { useTranslations } from 'next-intl';
 
 export function Hero({ locale }: { locale: string }) {
   const t = useTranslations('hero');
+  const tSections = useTranslations('sections');
 
   return (
     <section className="glass relative overflow-hidden rounded-3xl px-6 py-10 shadow-glow sm:px-10">
@@ -31,16 +32,16 @@ export function Hero({ locale }: { locale: string }) {
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           {[
-            { title: 'Lectures', gradient: 'bg-gradient-lectures', icon: '📖', desc: 'Лекции и методология' },
-            { title: 'Videos', gradient: 'bg-gradient-videos', icon: '🎬', desc: 'Разборы и мастер-классы' },
-            { title: 'Practice', gradient: 'bg-gradient-practice', icon: '🛠️', desc: 'Практические занятия' },
-            { title: 'Tests', gradient: 'bg-gradient-tests', icon: '✅', desc: 'Интерактивные задания' }
+            { key: 'lectures', gradient: 'bg-gradient-lectures', icon: '📖' },
+            { key: 'videos', gradient: 'bg-gradient-videos', icon: '🎬' },
+            { key: 'practice', gradient: 'bg-gradient-practice', icon: '🛠️' },
+            { key: 'tests', gradient: 'bg-gradient-tests', icon: '✅' }
           ].map((item) => (
-            <div key={item.title} className={`${item.gradient} card-hover rounded-2xl p-[1px] text-white`}>
+            <div key={item.key} className={`${item.gradient} card-hover rounded-2xl p-[1px] text-white`}>
               <div className="glass h-full rounded-2xl p-4">
                 <div className="mb-3 text-2xl">{item.icon}</div>
-                <div className="text-lg font-semibold">{item.title}</div>
-                <div className="text-sm text-slate-100/80">{item.desc}</div>
+                <div className="text-lg font-semibold">{tSections(`${item.key}.title`)}</div>
+                <div className="text-sm text-slate-100/80">{tSections(`${item.key}.description`)}</div>
               </div>
             </div>
           ))}

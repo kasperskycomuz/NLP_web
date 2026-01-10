@@ -63,6 +63,36 @@
       "badge": "RU / UZ"
     }
   },
+  "pages": {
+    "lectures": {
+      "title": "📖 Ma'ruzalar",
+      "subtitle": "Tabiiy tilni qayta ishlash algoritmlari va usullari bo'yicha chuqur materiallar"
+    },
+    "videos": {
+      "title": "🎬 Video",
+      "subtitle": "Kod tahlillari, videoma'ruzalar va ekspertlar bilan intervyular"
+    },
+    "practice": {
+      "title": "🛠️ Amaliyot",
+      "subtitle": "Haqiqiy vazifalar uchun ssenariy va ustaxonalar"
+    },
+    "tests": {
+      "title": "✅ Testlar",
+      "subtitle": "Har moduldan so'ng kvizlar, kod-topshiriqlar va holatlar"
+    },
+    "syllabus": {
+      "title": "📋 Sillabus",
+      "subtitle": "Kurs maqsadlari, jadval, baholash va nazorat nuqtalari"
+    },
+    "authors": {
+      "title": "👥 Mualliflar",
+      "subtitle": "Kurs o'qituvchilari va taklif etilgan mutaxassislar"
+    },
+    "glossary": {
+      "title": "📚 Glossariy",
+      "subtitle": "Misollar bilan ikki tilli terminlar lug'ati"
+    }
+  },
   "stats": {
     "modules": "modul",
     "hours": "soat kontent",

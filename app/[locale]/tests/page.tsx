@@ -1,16 +1,15 @@
 import { PageHeader } from '@/components/page-header';
 import { testTypes } from '@/content/tests';
 import { Locale } from '@/i18n';
+import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 
 export default function TestsPage({ params }: { params: { locale: Locale } }) {
   setRequestLocale(params.locale);
+  const t = useTranslations('pages.tests');
   return (
     <div className="space-y-6">
-      <PageHeader
-        title="✅ Тесты"
-        subtitle="Квизы, код-задачи и кейсы для самопроверки"
-      />
+      <PageHeader title={t('title')} subtitle={t('subtitle')} />
       <div className="grid gap-4 md:grid-cols-2">
         {testTypes.map((test) => (
           <div key={test.title} className="rounded-2xl border border-slate-200/70 bg-white/70 p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900/70">

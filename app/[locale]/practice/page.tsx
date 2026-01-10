@@ -1,16 +1,15 @@
 import { PageHeader } from '@/components/page-header';
 import { practiceItems } from '@/content/practice';
 import { Locale } from '@/i18n';
+import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 
 export default function PracticePage({ params }: { params: { locale: Locale } }) {
   setRequestLocale(params.locale);
+  const t = useTranslations('pages.practice');
   return (
     <div className="space-y-6">
-      <PageHeader
-        title="🛠️ Практика"
-        subtitle="Сценарии и мастерские для отработки навыков в реальных задачах"
-      />
+      <PageHeader title={t('title')} subtitle={t('subtitle')} />
       <div className="grid gap-4 md:grid-cols-2">
         {practiceItems.map((item) => (
           <div key={item.code} className="glass card-hover flex flex-col justify-between rounded-2xl p-5">

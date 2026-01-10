@@ -1,17 +1,16 @@
 import { PageHeader } from '@/components/page-header';
 import { authors } from '@/content/authors';
 import { Locale } from '@/i18n';
+import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 
 export default function AuthorsPage({ params }: { params: { locale: Locale } }) {
+  const t = useTranslations('pages.authors');
   setRequestLocale(params.locale);
   return (
     <div className="space-y-6">
-      <PageHeader
-        title="👥 Авторы"
-        subtitle="Преподаватели и приглашённые специалисты курса"
-      />
+      <PageHeader title={t('title')} subtitle={t('subtitle')} />
       <div className="grid gap-4 md:grid-cols-2">
         {authors.map((author) => (
           <div key={author.name} className="rounded-2xl border border-slate-200/70 bg-white/70 p-5 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70">

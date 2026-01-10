@@ -1,16 +1,15 @@
 import { PageHeader } from '@/components/page-header';
 import { videoCategories } from '@/content/videos';
 import { Locale } from '@/i18n';
+import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 
 export default function VideosPage({ params }: { params: { locale: Locale } }) {
   setRequestLocale(params.locale);
+  const t = useTranslations('pages.videos');
   return (
     <div className="space-y-6">
-      <PageHeader
-        title="🎬 Видео"
-        subtitle="Подборка видеолекций, код-разборов и интервью с экспертами"
-      />
+      <PageHeader title={t('title')} subtitle={t('subtitle')} />
       <div className="grid gap-4 md:grid-cols-2">
         {videoCategories.map((video) => (
           <div key={video.title} className="card-hover rounded-2xl border border-slate-200/70 bg-white/70 p-5 dark:border-slate-800 dark:bg-slate-900/70">

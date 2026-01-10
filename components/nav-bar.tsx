@@ -8,11 +8,12 @@ import { ThemeToggle } from './theme-toggle';
 
 export function NavBar({ locale }: { locale: Locale }) {
   const tNav = useTranslations('nav');
-  const pathname = usePathname();
+  const pathname = usePathname() || '';
 
   const isActive = (href: string) => pathname === `/${locale}${href}`;
 
   const otherLocale: Locale = locale === 'ru' ? 'uz' : 'ru';
+  const switchLocaleHref = pathname.replace(/^\/(ru|uz)/, `/${otherLocale}`) || `/${otherLocale}`;
 
   return (
     <header className="sticky top-0 z-40 backdrop-blur-md">
@@ -34,9 +35,9 @@ export function NavBar({ locale }: { locale: Locale }) {
         </nav>
         <div className="flex items-center gap-2">
           <Link
-            href={pathname.replace(`/${locale}`, `/${otherLocale}`) || `/${otherLocale}`}
-            locale={otherLocale}
-            className="rounded-full border border-slate-200 px-3 py-1 text-sm font-medium text-slate-700 hover:border-slate-300 dark:border-slate-700 dark:text-slate-100 dark:hover:border-slate-500"
+            href={switchLocaleHref}
+            prefetch={false}
+            className="rounded-full border border-slate-200 px-3 py-1 text-sm font-medium text-slate-700 hover:border-slate-300 dark:border-slate-700 dark:text-slate-100 dark:hover-border-slate-500"
           >
             {otherLocale.toUpperCase()}
           </Link>

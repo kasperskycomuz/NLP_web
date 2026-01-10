@@ -37,7 +37,6 @@ export default function PracticePage({ params }: { params: { locale: Locale } })
             <a
               key={file}
               href={encodeURI(`/${file}`)}
-              download
               target="_blank"
               rel="noreferrer"
               className="flex items-center justify-between rounded-lg border border-slate-200 bg-white/80 px-3 py-2 text-sm font-medium text-slate-800 transition hover:-translate-y-0.5 hover:shadow dark:border-slate-700 dark:bg-slate-800/70 dark:text-slate-100"

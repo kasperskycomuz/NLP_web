@@ -11,3 +11,11 @@ export const navigationLinks = [
   { href: '/authors', key: 'authors' },
   { href: '/glossary', key: 'glossary' }
 ];
+
+const i18n = {
+  locales,
+  defaultLocale,
+  localePrefix: 'always' as const
+};
+
+export default i18n;

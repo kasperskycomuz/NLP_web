@@ -1,6 +1,9 @@
+import { getRequestConfig } from 'next-intl/server';
+
 export const locales = ['ru', 'uz'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'ru';
+export const localePrefix = 'always' as const;
 
 export const navigationLinks = [
   { href: '/lectures', key: 'lectures' },
@@ -12,10 +15,8 @@ export const navigationLinks = [
   { href: '/glossary', key: 'glossary' }
 ];
 
-const i18n = {
-  locales,
-  defaultLocale,
-  localePrefix: 'always' as const
-};
-
-export default i18n;
+// next-intl requires a default export that provides messages per locale at request time
+export default getRequestConfig(async ({ locale }) => ({
+  locale,
+  messages: (await import(`./messages/${locale}.json`)).default
+}));

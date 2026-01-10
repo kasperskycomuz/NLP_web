@@ -3,7 +3,7 @@ import { useTranslations } from 'next-intl';
 export function Stats() {
   const t = useTranslations('stats');
   const stats = [
-    { value: '5', label: t('modules') },
+    { value: '18', label: t('modules') },
     { value: '60+', label: t('hours') },
     { value: '8', label: t('practice') }
   ];

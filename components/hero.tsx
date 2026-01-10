@@ -1,4 +1,4 @@
-import Link from 'next-intl/link';
+import { Link } from 'next-intl/navigation';
 import { useTranslations } from 'next-intl';
 
 export function Hero({ locale }: { locale: string }) {

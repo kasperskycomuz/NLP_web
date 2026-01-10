@@ -16,7 +16,12 @@
     "title": "Mashinalarga insonni tushunishni o'rgatuvchi texnologiyalar",
     "subtitle": "Tabiiy tilni qayta ishlash bo'yicha ta'lim portaliga xush kelibsiz. Bu yerda rus va o'zbek tillarida NLP bo'yicha ma'ruzalar, amaliy topshiriqlar, videolar va vositalar jamlangan.",
     "cta": "Boshlash",
-    "ctaSecondary": "Sillabusni ko'rish"
+    "ctaSecondary": "Sillabusni ko'rish",
+    "university": {
+      "label": "Hamkor universitet",
+      "name": "O'zbekiston davlat jahon tillari universiteti",
+      "short": "УзГУМЯ"
+    }
   },
   "labels": {
     "updating": "Yangi mavzular chiqqanda yangilanadi",

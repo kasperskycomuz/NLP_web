@@ -11,6 +11,14 @@ export function Hero({ locale }: { locale: string }) {
       <div className="relative grid gap-8 lg:grid-cols-2">
         <div className="space-y-6">
           <p className="inline-flex rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white dark:bg-white/90 dark:text-slate-900">NLP Hub</p>
+          <div className="inline-flex items-center gap-3 rounded-2xl border border-white/70 bg-white/70 px-3 py-2 shadow-sm backdrop-blur dark:border-slate-800 dark:bg-slate-900/70">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-600 text-sm font-bold uppercase text-white shadow-md">Уз</div>
+            <div className="leading-tight">
+              <div className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-300">{t('university.label')}</div>
+              <div className="text-sm font-semibold text-slate-900 dark:text-white">{t('university.short')}</div>
+              <div className="text-xs text-slate-700 dark:text-slate-200">{t('university.name')}</div>
+            </div>
+          </div>
           <h1 className="font-heading text-4xl font-bold leading-tight text-slate-900 dark:text-white sm:text-5xl">
             {t('title')}
           </h1>

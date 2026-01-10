@@ -16,7 +16,10 @@ export const navigationLinks = [
 ];
 
 // next-intl requires a default export that provides messages per locale at request time
-export default getRequestConfig(async ({ locale }) => ({
-  locale,
-  messages: (await import(`./messages/${locale}.json`)).default
-}));
+export default getRequestConfig(async ({ requestLocale }) => {
+  const locale = await requestLocale;
+  return {
+    locale,
+    messages: (await import(`./messages/${locale}.json`)).default
+  };
+});

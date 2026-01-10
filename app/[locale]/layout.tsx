@@ -4,7 +4,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Footer } from '@/components/footer';
 import { defaultLocale, Locale, locales } from '@/i18n';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { ReactNode } from 'react';
 
 export const metadata = {
@@ -24,7 +24,7 @@ export default async function LocaleLayout({
   params: { locale: Locale };
 }) {
   const locale = params.locale ?? defaultLocale;
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const messages = await getMessages();
 
   return (

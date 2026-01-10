@@ -1,9 +1,11 @@
 import { PageHeader } from '@/components/page-header';
 import { authors } from '@/content/authors';
 import { Locale } from '@/i18n';
+import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 
 export default function AuthorsPage({ params }: { params: { locale: Locale } }) {
+  setRequestLocale(params.locale);
   return (
     <div className="space-y-6">
       <PageHeader

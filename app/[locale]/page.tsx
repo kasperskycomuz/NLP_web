@@ -2,9 +2,11 @@ import { Hero } from '@/components/hero';
 import { SectionCard } from '@/components/section-card';
 import { Stats } from '@/components/stats';
 import { navigationLinks, Locale } from '@/i18n';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
 export default function HomePage({ params }: { params: { locale: Locale } }) {
+  setRequestLocale(params.locale);
   const t = useTranslations('sections');
   const { locale } = params;
 

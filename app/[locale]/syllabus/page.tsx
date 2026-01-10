@@ -1,8 +1,10 @@
 import { PageHeader } from '@/components/page-header';
 import { syllabusItems } from '@/content/syllabus';
 import { Locale } from '@/i18n';
+import { setRequestLocale } from 'next-intl/server';
 
 export default function SyllabusPage({ params }: { params: { locale: Locale } }) {
+  setRequestLocale(params.locale);
   return (
     <div className="space-y-6">
       <PageHeader

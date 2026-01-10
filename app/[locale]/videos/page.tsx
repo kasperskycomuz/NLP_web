@@ -1,8 +1,10 @@
 import { PageHeader } from '@/components/page-header';
 import { videoCategories } from '@/content/videos';
 import { Locale } from '@/i18n';
+import { setRequestLocale } from 'next-intl/server';
 
 export default function VideosPage({ params }: { params: { locale: Locale } }) {
+  setRequestLocale(params.locale);
   return (
     <div className="space-y-6">
       <PageHeader

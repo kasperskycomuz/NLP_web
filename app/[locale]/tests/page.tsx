@@ -16,7 +16,7 @@ export default function TestsPage({ params }: { params: { locale: Locale } }) {
         {testTopics.map((test, idx) => (
           <Link
             key={test.title.ru}
-            href={`/${locale}/tests?topic=${idx + 1}`}
+            href={`/${locale}/tests/${idx + 1}`}
             prefetch={false}
             className="block rounded-2xl border border-slate-200/70 bg-white/70 p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 dark:border-slate-800 dark:bg-slate-900/70"
           >

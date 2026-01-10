@@ -12,7 +12,7 @@ export type SectionCardProps = {
 
 export function SectionCard({ title, description, badge, href, gradient, icon }: SectionCardProps) {
   return (
-    <Link href={href} className="card-hover block rounded-3xl border border-slate-200/70 bg-white/70 p-[1px] backdrop-blur dark:border-slate-800/60 dark:bg-slate-900/70">
+    <Link href={href as any} prefetch={false} className="card-hover block rounded-3xl border border-slate-200/70 bg-white/70 p-[1px] backdrop-blur dark:border-slate-800/60 dark:bg-slate-900/70">
       <div className={`${gradient} rounded-3xl p-[1px]`}> 
         <div className="flex h-full flex-col justify-between rounded-3xl bg-white/90 p-5 text-slate-800 dark:bg-slate-950/80 dark:text-white">
           <div className="flex items-center gap-3 text-xl font-semibold">

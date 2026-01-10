@@ -35,7 +35,7 @@ export function NavBar({ locale }: { locale: Locale }) {
         </nav>
         <div className="flex items-center gap-2">
           <Link
-            href={switchLocaleHref}
+            href={switchLocaleHref as any}
             prefetch={false}
             className="rounded-full border border-slate-200 px-3 py-1 text-sm font-medium text-slate-700 hover:border-slate-300 dark:border-slate-700 dark:text-slate-100 dark:hover-border-slate-500"
           >

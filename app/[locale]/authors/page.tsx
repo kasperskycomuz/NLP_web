@@ -23,9 +23,15 @@ export default function AuthorsPage({ params }: { params: { locale: Locale } }) 
               ))}
             </div>
             <div className="mt-3 flex flex-wrap gap-3 text-sm text-indigo-600 dark:text-indigo-300">
-              <Link href={`mailto:${author.contacts.email}`}>Email</Link>
-              <Link href={author.contacts.github}>GitHub</Link>
-              <Link href={author.contacts.linkedin}>LinkedIn</Link>
+              <Link href={`mailto:${author.contacts.email}`} prefetch={false}>
+                Email
+              </Link>
+              <a href={author.contacts.github} target="_blank" rel="noreferrer" className="underline-offset-4 hover:underline">
+                GitHub
+              </a>
+              <a href={author.contacts.linkedin} target="_blank" rel="noreferrer" className="underline-offset-4 hover:underline">
+                LinkedIn
+              </a>
             </div>
           </div>
         ))}

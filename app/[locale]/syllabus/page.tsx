@@ -7,21 +7,22 @@ import { setRequestLocale } from 'next-intl/server';
 export default function SyllabusPage({ params }: { params: { locale: Locale } }) {
   setRequestLocale(params.locale);
   const t = useTranslations('pages.syllabus');
+  const locale = params.locale;
   return (
     <div className="space-y-6">
       <PageHeader title={t('title')} subtitle={t('subtitle')} />
       <div className="grid gap-4">
         {syllabusItems.map((item) => (
-          <div key={item.week} className="glass card-hover rounded-2xl p-5">
+          <div key={item.week.ru} className="glass card-hover rounded-2xl p-5">
             <div className="flex items-center justify-between text-sm text-slate-600 dark:text-slate-300">
-              <span className="font-semibold text-slate-900 dark:text-white">{item.week}</span>
-              <span>{item.focus}</span>
+              <span className="font-semibold text-slate-900 dark:text-white">{item.week[locale]}</span>
+              <span>{item.focus[locale]}</span>
             </div>
             <ul className="mt-3 space-y-1 text-sm text-slate-700 dark:text-slate-200">
               {item.checkpoints.map((checkpoint) => (
-                <li key={checkpoint} className="flex items-start gap-2">
+                <li key={checkpoint.ru} className="flex items-start gap-2">
                   <span className="mt-0.5">•</span>
-                  <span>{checkpoint}</span>
+                  <span>{checkpoint[locale]}</span>
                 </li>
               ))}
             </ul>

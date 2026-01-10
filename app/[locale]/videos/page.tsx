@@ -7,19 +7,20 @@ import { setRequestLocale } from 'next-intl/server';
 export default function VideosPage({ params }: { params: { locale: Locale } }) {
   setRequestLocale(params.locale);
   const t = useTranslations('pages.videos');
+  const locale = params.locale;
   return (
     <div className="space-y-6">
       <PageHeader title={t('title')} subtitle={t('subtitle')} />
       <div className="grid gap-4 md:grid-cols-2">
         {videoCategories.map((video) => (
-          <div key={video.title} className="card-hover rounded-2xl border border-slate-200/70 bg-white/70 p-5 dark:border-slate-800 dark:bg-slate-900/70">
+          <div key={video.title.ru} className="card-hover rounded-2xl border border-slate-200/70 bg-white/70 p-5 dark:border-slate-800 dark:bg-slate-900/70">
             <div className="flex items-center gap-3 text-lg font-semibold text-slate-900 dark:text-white">
               <span className="text-2xl" aria-hidden>
                 {video.icon}
               </span>
-              <span>{video.title}</span>
+              <span>{video.title[locale]}</span>
             </div>
-            <p className="mt-2 text-sm text-slate-700 dark:text-slate-200">{video.description}</p>
+            <p className="mt-2 text-sm text-slate-700 dark:text-slate-200">{video.description[locale]}</p>
             <div className="mt-3 text-xs text-slate-500 dark:text-slate-300">Добавляем разборы по запросу студентов</div>
           </div>
         ))}

@@ -1,4 +1,4 @@
-import Link from 'next-intl/link';
+import { Link } from 'next-intl/navigation';
 import { ReactNode } from 'react';
 
 export type SectionCardProps = {

@@ -7,25 +7,41 @@ import { useMemo, useState } from 'react';
 
 function buildQuestions(locale: Locale, topicIndex: number) {
   const topic = testTopics[topicIndex];
-  const correct = locale === 'ru' ? topic.description.ru : topic.description.uz;
-  const wrongsRu = ['Это тема по компьютерному зрению', 'Материал не относится к NLP', 'Касается физики и матанализа'];
-  const wrongsUz = ['Bu kompyuter koʻrish mavzusi', 'NLP bilan bogʻliq emas', 'Fizika va matematik tahlil haqida'];
-  const wrongs = locale === 'ru' ? wrongsRu : wrongsUz;
+  const totalTopics = testTopics.length;
 
-  return Array.from({ length: 5 }).map((_, i) => ({
-    id: `q${i + 1}`,
-    text:
-      locale === 'ru'
-        ? `Выберите верное утверждение о теме «${topic.title.ru}».`
-        : `«${topic.title.uz}» mavzusi haqida toʻgʻri fikrni tanlang.`,
-    options: [
-      { value: 'correct', label: correct },
-      { value: 'w1', label: wrongs[0] },
-      { value: 'w2', label: wrongs[1] },
-      { value: 'w3', label: wrongs[2] }
-    ],
-    correct: 'correct'
-  }));
+  return Array.from({ length: 25 }).map((_, i) => {
+    const useTitle = i % 2 === 0;
+    const sourcePool = testTopics.map((t) => (useTitle ? t.title[locale] : t.description[locale]));
+    const correctLabel = useTitle ? topic.title[locale] : topic.description[locale];
+
+    const distractors: string[] = [];
+    let offset = 1;
+    while (distractors.length < 3) {
+      const otherIdx = (topicIndex + i + offset) % totalTopics;
+      const candidate = sourcePool[otherIdx];
+      if (candidate !== correctLabel && !distractors.includes(candidate)) {
+        distractors.push(candidate);
+      }
+      offset += 1;
+    }
+
+    const position = i % 4; // deterministic position for correct option
+    const options = [...distractors];
+    options.splice(position, 0, correctLabel);
+
+    return {
+      id: `q${i + 1}`,
+      text: useTitle
+        ? locale === 'ru'
+          ? `Вопрос ${i + 1}: выберите формулировку, которая соответствует теме «${topic.title.ru}».`
+          : `Savol ${i + 1}: «${topic.title.uz}» mavzusiga mos bayonotni tanlang.`
+        : locale === 'ru'
+          ? `Вопрос ${i + 1}: какое описание лучше характеризует тему «${topic.title.ru}»?`
+          : `Savol ${i + 1}: qaysi tavsif «${topic.title.uz}» mavzusini eng yaxshi ifodalaydi?`,
+      options: options.map((opt, idx) => ({ value: idx === position ? 'correct' : `w${idx}`, label: opt })),
+      correct: 'correct'
+    };
+  });
 }
 
 export default function TopicTestPage({ params }: { params: { locale: Locale; topic: string } }) {

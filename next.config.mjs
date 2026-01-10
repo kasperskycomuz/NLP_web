@@ -1,9 +1,7 @@
 import createNextIntlPlugin from 'next-intl/plugin';
 
-const withNextIntl = createNextIntlPlugin({
-  locales: ['ru', 'uz'],
-  defaultLocale: 'ru'
-});
+// next-intl plugin expects a path to the i18n config file
+const withNextIntl = createNextIntlPlugin('./i18n.ts');
 
 export default withNextIntl({
   reactStrictMode: true,

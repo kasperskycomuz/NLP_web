@@ -29,8 +29,22 @@ export default function SyllabusPage({ params }: { params: { locale: Locale } })
           </div>
         ))}
       </div>
-      <div className="rounded-2xl border border-slate-200/70 bg-white/70 p-4 text-sm text-slate-700 shadow-sm dark:border-slate-800 dark:bg-slate-900/70 dark:text-slate-200">
-        PDF силлабуса можно прикрепить здесь (позже: ссылка на файл или storage).
+      <div className="rounded-2xl border border-slate-200/70 bg-white/80 p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900/70">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <div className="text-sm font-semibold text-slate-900 dark:text-white">PDF силлабуса</div>
+            <p className="text-sm text-slate-700 dark:text-slate-200">
+              Скачать «nlp kunduzgi.pdf». Если файла нет, добавьте его в папку public/nlp-kunduzgi.pdf.
+            </p>
+          </div>
+          <a
+            href="/nlp-kunduzgi.pdf"
+            className="inline-flex items-center justify-center rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:bg-slate-100 dark:text-slate-900"
+            download
+          >
+            Скачать PDF
+          </a>
+        </div>
       </div>
     </div>
   );

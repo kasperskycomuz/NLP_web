@@ -1,6 +1,7 @@
 "use client";
 
-import { Link, usePathname } from 'next-intl/navigation';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { navigationLinks, Locale } from '@/i18n';
 import { ThemeToggle } from './theme-toggle';

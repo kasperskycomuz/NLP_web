@@ -1,7 +1,7 @@
 import { PageHeader } from '@/components/page-header';
 import { authors } from '@/content/authors';
 import { Locale } from '@/i18n';
-import { Link } from 'next-intl/navigation';
+import Link from 'next/link';
 
 export default function AuthorsPage({ params }: { params: { locale: Locale } }) {
   return (

@@ -30,7 +30,7 @@ export default function LecturesPage({ params }: { params: { locale: Locale } })
     <div className="space-y-6">
       <PageHeader title={t('title')} subtitle={t('subtitle')} />
       <div className="rounded-2xl border border-slate-200/70 bg-white/80 p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900/70">
-        <div className="mb-3 text-lg font-semibold text-slate-900 dark:text-white">Скачать лекции (PDF)</div>
+        <div className="mb-3 text-lg font-semibold text-slate-900 dark:text-white">Скачать лекции</div>
         <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-3">
           {lectures.map((file) => (
             <a

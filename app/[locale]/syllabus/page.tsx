@@ -32,7 +32,7 @@ export default function SyllabusPage({ params }: { params: { locale: Locale } })
       <div className="rounded-2xl border border-slate-200/70 bg-white/80 p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900/70">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <div className="text-sm font-semibold text-slate-900 dark:text-white">PDF силлабуса</div>
+            <div className="text-sm font-semibold text-slate-900 dark:text-white">Силлабус</div>
             <p className="text-sm text-slate-700 dark:text-slate-200">
               Скачать «nlp kunduzgi.pdf». Если файла нет, добавьте его в папку public/nlp-kunduzgi.pdf.
             </p>
@@ -43,7 +43,7 @@ export default function SyllabusPage({ params }: { params: { locale: Locale } })
             target="_blank"
             rel="noreferrer"
           >
-            Скачать PDF
+            Скачать
           </a>
         </div>
       </div>

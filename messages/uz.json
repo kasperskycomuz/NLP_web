@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "title": "NLP Hub — Tabiiy tilni qayta ishlash bo'yicha ta'lim portali",
+    "description": "Rus va o'zbek tillarida NLP bo'yicha ma'ruzalar, video, amaliyot va testlar"
+  },
+  "nav": {
+    "lectures": "Ma'ruzalar",
+    "videos": "Video",
+    "practice": "Amaliyot",
+    "tests": "Testlar",
+    "syllabus": "Sillabus",
+    "authors": "Mualliflar",
+    "glossary": "Glossariy"
+  },
+  "hero": {
+    "title": "Mashinalarga insonni tushunishni o'rgatuvchi texnologiyalar",
+    "subtitle": "Tabiiy tilni qayta ishlash bo'yicha ta'lim portaliga xush kelibsiz. Bu yerda rus va o'zbek tillarida NLP bo'yicha ma'ruzalar, amaliy topshiriqlar, videolar va vositalar jamlangan.",
+    "cta": "Boshlash",
+    "ctaSecondary": "Sillabusni ko'rish"
+  },
+  "labels": {
+    "updating": "Yangi mavzular chiqqanda yangilanadi",
+    "byRequest": "Talabalar so'rovi bilan tahlillar qo'shamiz",
+    "checklist": "Har bir mashq chek-list bilan",
+    "selfCheck": "Interaktiv holatlar va o'z-o'zini tekshirish",
+    "download": "To'liq sillabus (PDF)",
+    "contacts": "Hamkorlik uchun kontaktlar"
+  },
+  "sections": {
+    "lectures": {
+      "title": "Ma'ruzalar",
+      "description": "Bazaviy tushunchalardan zamonaviy modellarigacha bo'lgan chuqur materiallar.",
+      "badge": "Yangi mavzular bilan yangilanadi"
+    },
+    "videos": {
+      "title": "Video",
+      "description": "NLP va ML bo'yicha videoma'ruzalar, kod tahlillari va intervyular.",
+      "badge": "Talabalar so'rovi bilan"
+    },
+    "practice": {
+      "title": "Amaliyot",
+      "description": "Haqiqiy vazifalar uchun ishlash ssenariylari va ustaxonalar.",
+      "badge": "Chek-listlar va maslahatlar"
+    },
+    "tests": {
+      "title": "Testlar",
+      "description": "Har moduldan so'ng kvizlar, kod-topshiriqlar va holatlar.",
+      "badge": "Interaktiv holatlar"
+    },
+    "syllabus": {
+      "title": "Sillabus",
+      "description": "Kurs maqsadlari, jadvali, baholash va nazorat nuqtalari.",
+      "badge": "PDF va chek-list"
+    },
+    "authors": {
+      "title": "Mualliflar",
+      "description": "Kurs o'qituvchilari va taklif etilgan mutaxassislar jamoasi.",
+      "badge": "Kontaktlar va profillar"
+    },
+    "glossary": {
+      "title": "Glossariy",
+      "description": "NLP atamalari bo'yicha ikki tilli lug'at va izlash.",
+      "badge": "RU / UZ"
+    }
+  },
+  "stats": {
+    "modules": "modul",
+    "hours": "soat kontent",
+    "practice": "amaliy ish"
+  },
+  "footer": {
+    "org": "O'zbekiston davlat jahon tillari universiteti",
+    "madeWith": "Next.js bilan yaratilgan va Vercel'da joylashtirilgan",
+    "contact": "Hamkorlik uchun: nlp-course@example.com"
+  }
+}

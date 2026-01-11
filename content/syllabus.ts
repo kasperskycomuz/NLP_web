@@ -49,7 +49,7 @@ export const syllabusItems: SyllabusItem[] = [
   },
   {
     week: { ru: 'Неделя 6', uz: '6-hafta' },
-    focus: { ru: 'POS-теггинг и стоп-слова', uz: 'POS-teglash va stop-soʼzlar' },
+    focus: { ru: 'Определение частей речи (POS-tagging) и стоп-слова', uz: 'POS-teglash (soʼz turkumlari) va stop-soʼzlar' },
     checkpoints: [
       { ru: 'Теггеры: HMM/CRF/biLSTM-CRF', uz: 'Taggerlar: HMM/CRF/biLSTM-CRF' },
       { ru: 'Стоп-слова и их влияние на задачи', uz: 'Stop-soʼzlar va vazifalardagi taʼsiri' }
@@ -57,7 +57,7 @@ export const syllabusItems: SyllabusItem[] = [
   },
   {
     week: { ru: 'Неделя 7', uz: '7-hafta' },
-    focus: { ru: 'Текстовые признаки и TF-IDF', uz: 'Matn belgilari va TF-IDF' },
+    focus: { ru: 'Текстовые признаки и модель TF-IDF', uz: 'Matn belgilari va TF-IDF modeli' },
     checkpoints: [
       { ru: 'Bag-of-Words, n-граммы', uz: 'Bag-of-Words, n-grammalar' },
       { ru: 'TF-IDF, косинусное сходство', uz: 'TF-IDF, kosinus oʼxshashlik' }
@@ -81,7 +81,7 @@ export const syllabusItems: SyllabusItem[] = [
   },
   {
     week: { ru: 'Неделя 10', uz: '10-hafta' },
-    focus: { ru: 'Классификация текстов и ML/нейросети', uz: 'Matn klassifikatsiyasi va ML/neyrotarmoqlar' },
+    focus: { ru: 'Классификация текстов, машинное обучение и нейронные сети', uz: 'Matn klassifikatsiyasi, mashinaviy oʼqitish va neyron tarmoqlar' },
     checkpoints: [
       { ru: 'Логистическая регрессия, SVM', uz: 'Logistik regressiya, SVM' },
       { ru: 'Нейросетевые подходы, регуляризация', uz: 'Neyrotarmoq yondashuvlari, regulyarizatsiya' }
@@ -89,7 +89,7 @@ export const syllabusItems: SyllabusItem[] = [
   },
   {
     week: { ru: 'Неделя 11', uz: '11-hafta' },
-    focus: { ru: 'Тематическое моделирование', uz: 'Mavzuli modellashtirish' },
+    focus: { ru: 'Основы тематического моделирования (topic modeling)', uz: 'Mavzuli modellashtirish asoslari (topic modeling)' },
     checkpoints: [
       { ru: 'LDA и когерентность', uz: 'LDA va coherence' },
       { ru: 'Контекстные модели тем', uz: 'Kontekstli mavzu modellari' }
@@ -97,7 +97,7 @@ export const syllabusItems: SyllabusItem[] = [
   },
   {
     week: { ru: 'Неделя 12', uz: '12-hafta' },
-    focus: { ru: 'Стилистометрия и стиль', uz: 'Stilometriya va uslub' },
+    focus: { ru: 'Стилистометрия и стиль текста', uz: 'Stilometriya va matn uslubi' },
     checkpoints: [
       { ru: 'Символьные n-граммы, функциональные слова', uz: 'Belgi n-gramlari, funksional soʼzlar' },
       { ru: 'Атрибуция авторства', uz: 'Mualliflikni aniqlash' }
@@ -105,7 +105,7 @@ export const syllabusItems: SyllabusItem[] = [
   },
   {
     week: { ru: 'Неделя 13', uz: '13-hafta' },
-    focus: { ru: 'Векторные представления слов и кластеризация', uz: 'Soʼz embeddinglari va klasterlash' },
+    focus: { ru: 'Векторные представления слов и кластеризация', uz: 'Soʼzlarning vektorli tasvirlari va klasterlash' },
     checkpoints: [
       { ru: 'CBOW/Skip-gram, fastText', uz: 'CBOW/Skip-gram, fastText' },
       { ru: 'Кластеризация, визуализация', uz: 'Klasterlash, vizualizatsiya' }
@@ -113,7 +113,7 @@ export const syllabusItems: SyllabusItem[] = [
   },
   {
     week: { ru: 'Неделя 14', uz: '14-hafta' },
-    focus: { ru: 'Векторный анализ и семантика текста', uz: 'Vektor tahlil va semantika' },
+    focus: { ru: 'Векторный анализ и семантика текста', uz: 'Vektor tahlil va matn semantikasi' },
     checkpoints: [
       { ru: 'Косинус, аналогии, bias', uz: 'Kosinus, analogiyalar, bias' },
       { ru: 'Ретрофиттинг, выравнивание пространств', uz: 'Retrofitting, makonlarni tekislash' }
@@ -129,7 +129,7 @@ export const syllabusItems: SyllabusItem[] = [
   },
   {
     week: { ru: 'Неделя 16', uz: '16-hafta' },
-    focus: { ru: 'Автоматическое реферирование и Transformer', uz: 'Avtomatik referat va Transformer' },
+    focus: { ru: 'Автоматическое реферирование текста и введение в Transformer-модели', uz: 'Matnni avtomatik referat qilish va Transformer modellari bilan tanishuv' },
     checkpoints: [
       { ru: 'Экстрактивная vs абстрактивная', uz: 'Ekstraktiv va abstraktiv' },
       { ru: 'Encoder-decoder, beam search', uz: 'Encoder-decoder, beam search' }

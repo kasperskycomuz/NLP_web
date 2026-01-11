@@ -507,16 +507,28 @@
 
 ## 15. Приложения
 
-### A. Примерный глоссарий терминов
+### A. Примерный глоссарий терминов (RU/UZ)
 
-| English | Русский | O'zbekcha |
-|---------|---------|-----------|
-| Natural Language Processing | Обработка естественного языка | Tabiiy tilni qayta ishlash |
-| Tokenization | Токенизация | Tokenizatsiya |
-| Sentiment Analysis | Анализ тональности | Sentiment tahlili |
-| Named Entity Recognition | Распознавание именованных сущностей | Nomlangan ob'ektlarni aniqlash |
-| Machine Translation | Машинный перевод | Mashinaviy tarjima |
-| Language Model | Языковая модель | Til modeli |
+| Термин (RU) | Определение (RU) | Atama (UZ) | Ta'rif (UZ) |
+|-------------|------------------|------------|-------------|
+| Обработка естественного языка (NLP) | Область ИИ, где модели понимают и генерируют текст/речь на человеческих языках | Tabiiy tilni qayta ishlash (NLP) | Sun'iy intellekt yo'nalishi; modelllar matn va nutqni tushunadi hamda yaratadi |
+| Корпус текстов | Большая коллекция текстов с метаданными для обучения и оценки моделей | Matn korpusi | Modellarni o'qitish va baholash uchun metama'lumotli yirik matn to'plami |
+| Токенизация | Разбиение текста на токены (слова, подпоследовательности) | Tokenizatsiya | Matnni tokenlarga (so'zlar, subso'zlar) ajratish jarayoni |
+| Перплексия | Метрика качества языковой модели: чем ниже, тем точнее предсказания | Perpleksiya | Til modeli sifat o'lchovi; past qiymat model aniqroq ekanini ko'rsatadi |
+| Лемматизация | Приведение слова к словарной форме с учётом части речи | Lemmatizatsiya | So'zni lug'aviy shakliga (lemma) qaytarish, so'z turkumini inobatga olib |
+| POS-теггинг | Автоматическое назначение частеречных тегов каждому токену | POS-teglash | Har bir token uchun so'z turkumi tegini avtomatik qo'yish |
+| TF-IDF | Взвешивание слов по частоте в документе и редкости в корпусе | TF-IDF | So'zlarning hujjatdagi chastotasi va korpusdagi kamyobligiga asoslangan og'irlik |
+| Сходство текстов | Измерение близости документов по признакам или эмбеддингам | Matn o'xshashligi | Hujjatlarni belgilar yoki embeddinglar bo'yicha yaqinligini o'lchash |
+| Распознавание сущностей (NER) | Выделение именованных объектов (PER/ORG/LOC) в тексте | Nomlangan obyektlarni aniqlash (NER) | Matndan nomlangan obyektlarni (PER/ORG/LOC) ajratib olish |
+| Классификация текстов | Отнесение текста к заранее заданному классу | Matnlarni tasniflash | Matnni oldindan belgilangan sinfga kiritish |
+| Тематическое моделирование | Выявление скрытых тем и распределений слов по темам (например, LDA) | Mavzuli modellashtirish | Matnlardagi yashirin mavzular va so'z taqsimotlarini aniqlash (masalan, LDA) |
+| Стилометрия | Анализ стиля и авторства по лингвистическим признакам | Stilometriya | Lingvistik belgilar orqali uslub va mualliflikni tahlil qilish |
+| Эмбеддинг слова | Плотный вектор, кодирующий значение слова в контексте | So'z embeddingi | So'z ma'nosini kontekstda ifodalovchi zich vektor |
+| Векторная семантика | Представление смысловых отношений через операции с векторами | Vektor semantikasi | Ma'no munosabatlarini vektor amallari orqali ifodalash |
+| Дерево зависимостей | Структура, показывающая связи «голова–зависимое» между словами | Bog'liqlik daraxti | So'zlar orasidagi «bosh–qaram» aloqalarni ko'rsatuvchi tuzilma |
+| Суммаризация | Автоматическое создание краткого содержания текста (экстрактивная/абстрактивная) | Summarizatsiya | Matnning qisqa mazmunini avtomatik tuzish (ekstraktiv/abstraktiv) |
+| Орфографическая и грамматическая коррекция | Исправление опечаток и грамматических ошибок с учётом контекста | Imlo va grammatik tuzatish | Kontekstni hisobga olib xatolarni tuzatish |
+| Машинный перевод | Автоматический перевод текста между языками (SMT/NMT/Transformer) | Mashinaviy tarjima | Matnni tillar o'rtasida avtomatik tarjima qilish (SMT/NMT/Transformer) |
 
 ### B. Полезные ресурсы
 - NLTK Documentation

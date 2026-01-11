@@ -34,7 +34,7 @@ export default function SyllabusPage({ params }: { params: { locale: Locale } })
           <div>
             <div className="text-sm font-semibold text-slate-900 dark:text-white">Силлабус</div>
             <p className="text-sm text-slate-700 dark:text-slate-200">
-              Скачать «nlp kunduzgi.pdf». Если файла нет, добавьте его в папку public/nlp-kunduzgi.pdf.
+              Скачать силлабус (PDF). Если файла нет, добавьте его в папку public/nlp-kunduzgi.pdf.
             </p>
           </div>
           <a

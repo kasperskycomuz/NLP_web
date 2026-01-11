@@ -6,6 +6,7 @@ import { setRequestLocale } from 'next-intl/server';
 export default function PracticePage({ params }: { params: { locale: Locale } }) {
   setRequestLocale(params.locale);
   const t = useTranslations('pages.practice');
+  const localeFolder = params.locale === 'ru' ? 'ru' : 'uzb';
 
   const presentations = [
     { file: '1 Практическое занятие.pdf', label: '1 практическое занятие' },
@@ -36,7 +37,7 @@ export default function PracticePage({ params }: { params: { locale: Locale } })
           {presentations.map(({ file, label }) => (
             <a
               key={file}
-              href={encodeURI(`/${file}`)}
+              href={encodeURI(`/${localeFolder}/practise/${file}`)}
               target="_blank"
               rel="noreferrer"
               className="flex items-center justify-between rounded-lg border border-slate-200 bg-white/80 px-3 py-2 text-sm font-medium text-slate-800 transition hover:-translate-y-0.5 hover:shadow dark:border-slate-700 dark:bg-slate-800/70 dark:text-slate-100"
